@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         // webView 안에서 외부 url 페이지 보여주기
         webView.setWebViewClient(new MyWebViewClient());
         webView.loadUrl("file:///android_asset/www/index.html");
+        // 자바와 자바스크립트 함수 호출
+        webView.addJavascriptInterface(new MyJavascript(), "clickOnFace");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;
+        }
+    }
+
+    class MyJavascript {
+        @JavascriptInterface
+        public void clickOnFace(){
+
         }
     }
 }
