@@ -1,2 +1,2 @@
-include ':app', ':webtest', ':test14'
+include ':app', ':webtest', ':test14', ':myspannable'
 rootProject.name='Chap14'

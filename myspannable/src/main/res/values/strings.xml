@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MySpannable</string>
+    <string name="span_string">소금사막 \n img \n 볼리비아 우유니소금사막.. 하늘과 맞닿아 있는 소금사막</string>
+    <string name="html_string"><![CDATA[<br/><h1><font color="RED">안반데기</font></h1><a href="http://www.안반데기.kr"><img src="img02"></a><br/>대관령 고랭지 배추밭]]></string>
+</resources>
